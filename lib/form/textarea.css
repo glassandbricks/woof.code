@@ -1,0 +1,36 @@
+:root {
+  --textarea-min-height-base: 18;
+  --textarea-min-height: calc(
+    var(--textarea-min-height-base) * var(--sizing-unit)
+  );
+
+  --textarea-min-width-base: 56;
+  --textarea-min-width: calc(
+    var(--textarea-min-width-base) * var(--sizing-unit)
+  );
+}
+
+.ui.flexible.field {
+  height: auto;
+  line-height: var(--document-line-height);
+
+  padding: var(--gutter-small);
+
+  &.small {
+    padding: var(--gutter-tiny);
+  }
+
+  &.big {
+    padding: var(--gutter);
+  }
+
+  &.large {
+    padding: var(--gutter-big);
+  }
+}
+
+textarea.ui.flexible.field {
+  min-height: var(--textarea-min-height);
+  min-width: var(--textarea-min-width);
+  line-height: var(--document-line-height);
+}
